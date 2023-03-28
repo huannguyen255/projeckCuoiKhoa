@@ -36,12 +36,12 @@
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <script src="./assets/js/main.js"></script>
-    <title>Chapman - Bán đồng hồ dạo</title>
+    <title>Chapman Group</title>
   </head>
 
   <body>
     <header class="header" id="header">
-      <nav class="nav container">
+      <nav class="nav container justify-content-between">
         <a href="#" class="nav__logo">
           <img
             src="./assets/img/logo.png"
@@ -51,7 +51,7 @@
           />
         </a>
 
-        <div class="nav__menu" id="nav-menu">
+        <div class="nav__menu align-items-center justify-content-center" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#home" class="nav__link active-link">Trang chủ</a>
@@ -62,12 +62,18 @@
             <li class="nav__item">  
               <a href="#products" class="nav__link">Sản phẩm</a>
             </li>
+            <li class="nav__item">  
+              <a href="#new" class="nav__link">Hàng mới về</a>
+            </li>
             <li class="nav__item">
-              <a href="#new" class="nav__link">Review</a>
+              <a href="#review" class="nav__link">Review</a>
             </li>
             <li class="nav__item">
               <a href="#faq" class="nav__link">FAQ</a>
             </li>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search">
+            </form>
           </ul>
         </div>
       </nav>
@@ -262,7 +268,7 @@
 
 
 <!--==================== TESTIMONIAL ====================-->
-<section class="new section container" id="new">
+<section class="review section container" id="review">
   <h2 class="section__title">Review</h2>
 <div style="--swiper-navigation-color: #000; --swiper-pagination-color: #000" class="swiper mySwiper section">
   <div class="parallax-bg" style="
@@ -348,6 +354,30 @@
   </div>
 
 </section>
+
+
+<section class="faq section container" id="faq">
+  <h2 class="section__title">Một số câu hỏi thường gặp</h2>
+
+<button class="collapsible">Câu hỏi 1</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, voluptatum ducimus. Quis, sed? Voluptatibus officia autem incidunt molestiae doloremque animi, ea temporibus, voluptatem, possimus amet expedita nemo natus magnam rem!</p>
+</div>
+
+<button class="collapsible">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, velit.</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium sunt expedita similique voluptatem sint quaerat illo harum recusandae nam tempora?</p>
+</div>
+
+<button class="collapsible">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ratione!</button>
+<div class="content">
+ <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias impedit a fugit dolor. Odio, eveniet! Ipsam molestias, earum, corrupti magni quaerat, illo voluptates ducimus dolorum in doloribus dolorem tempora. Consequuntur!</p>
+</div>
+
+<button class="collapsible">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit sed molestiae nostrum ullam, aperiam harum?</button>
+<div class="content">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae nemo voluptatibus voluptas ut possimus? Ipsam, inventore odio nisi, ullam accusamus obcaecati quo ut doloremque perferendis porro officia rem quasi numquam.</p>
+</div>
 
 <!--==================== FOOTER ====================-->
 <footer class="footer section">
@@ -468,6 +498,24 @@
     },
   });
 </script>
+
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
 
 </body>
 </html>

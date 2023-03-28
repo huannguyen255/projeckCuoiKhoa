@@ -1049,3 +1049,50 @@ header {
   font-weight: var(--font-bold);
   text-transform: uppercase;
 }
+
+.collapsible {
+  color: #22313f;
+  line-height: 1.5;
+  cursor: pointer;
+  font-weight: 450;
+  width: 100%;
+  text-align: left;
+  padding: 0 0 10px 0;
+  outline: none;
+  font-size: 20px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+  align-content: center;
+}
+
+.active,
+.collapsible:hover {
+}
+
+.collapsible:after {
+  content: "\002B";
+  color: #00b884;
+  font-weight: 800;
+  font-size: 30px;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding-top: 10px;
+  line-height: 2;
+  font-weight: 300;
+  font-size: 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.faq {
+  max-width: 1080px;
+}
